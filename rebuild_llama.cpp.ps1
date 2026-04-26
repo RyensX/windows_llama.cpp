@@ -216,6 +216,10 @@ switch ($blasAccelerator) {
             -DGGML_BLAS=ON `
             -DGGML_BLAS_VENDOR=OpenBLAS `
             -DLLAMA_CURL=OFF `
+            -DGGML_AVX_VNNI=ON `
+            -DGGML_AVX2=ON `
+            -DGGML_NATIVE=ON `
+            -DGGML_LTO=ON `
             ..
     }
 
@@ -224,6 +228,10 @@ switch ($blasAccelerator) {
             -DCMAKE_ASM_COMPILER="$ml64" `
             -DGGML_CUDA=ON `
             -DLLAMA_CURL=OFF `
+            -DGGML_AVX_VNNI=ON `
+            -DGGML_AVX2=ON `
+            -DGGML_NATIVE=ON `
+            -DGGML_LTO=ON `
             ..
     }
 
